@@ -11,6 +11,10 @@ app.use(express.json());
 // Connect to Database
 connectDB();
 
+// Live Test
+app.get("/", (req, res) => {
+  res.send("Brother Your Server Is Working Fine. Congrats!");
+});
 
 // Get EndPoints - To Get All Universities or Filter University Data By Country
 app.get("/universities", async (req, res) => {
